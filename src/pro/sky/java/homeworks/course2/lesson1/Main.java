@@ -18,4 +18,5 @@ public class Main {
         station.check(truck);
         station.check(truck2);
     }
+
 }
