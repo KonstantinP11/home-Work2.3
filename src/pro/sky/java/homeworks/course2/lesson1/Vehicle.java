@@ -1,6 +1,6 @@
 package pro.sky.java.homeworks.course2.lesson1;
 
-public class Vehicle {
+public abstract class Vehicle {
     private String modelName;
     private int wheelsCount;
 
@@ -13,12 +13,13 @@ public class Vehicle {
         return modelName;
     }
 
-    public int getWheelsCount() {
-        return wheelsCount;
-    }
-
     public void updateTyre() {
         System.out.println("Меняем покрышку");
     }
 
+    public void service() {
+        for (int i = 0; i < this.wheelsCount; i++) {
+            this.updateTyre();
+        }
+    }
 }
